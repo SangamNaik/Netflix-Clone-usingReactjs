@@ -1,0 +1,105 @@
+.banner {
+  height: 400px;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.4rem;
+  box-sizing: border-box;
+
+  &::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    background: black;
+    opacity: 0.6;
+  }
+
+  > h1,
+  p {
+    color: white;
+    width: 60%;
+    font-size: 3rem;
+    z-index: 10;
+    padding: 1rem 0;
+  }
+
+  > p {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    font-weight: 300;
+  }
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+
+    button {
+      width: 120px;
+      padding: 1rem;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      z-index: 10;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      svg {
+        font-size: 1.6rem;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:nth-child(odd) {
+        background-color: white;
+        color: black;
+      }
+
+      &:nth-child(even) {
+        background-color: grey;
+        color: white;
+      }
+    }
+  }
+}
+
+.row {
+  padding: 1rem;
+  background-color: black;
+
+  > h2 {
+    margin: 0.2rem;
+    color: white;
+    font-weight: 400;
+  }
+
+  > div {
+    display: flex;
+    overflow-x: auto;
+  }
+}
+
+.card {
+  width: 200px;
+  margin: 0.2rem;
+  cursor: pointer;
+  transition: transform 0.4s;
+
+  &:hover {
+    transform: translateY(-10px) scale(1.05);
+  }
+}
